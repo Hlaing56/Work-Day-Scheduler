@@ -2,6 +2,8 @@ var date = moment().format("dddd, MMMM Do")
 
 $("#currentDay").html(date);
 
+console.log(moment());
+
 var hour = moment().format("H")
 for( var i=0; i<24; i++ ) {
      var hourId = "#"+ i;
@@ -37,3 +39,9 @@ var load = function(){
 }
 
 load();
+
+function refresh() {
+     window .location.reload();
+}
+
+window.setInterval('refresh()', (10000 * 6)* 30);
